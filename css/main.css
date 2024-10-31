@@ -1,0 +1,433 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estils globals */
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    color: #333; /* Color del text per a millor contrast */
+    font-family: Arial, sans-serif;
+}
+
+/* Contenidor d'icones */
+.icon-container {
+    margin-left: 970px; /* Ajusta segons sigui necessari */
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Capçalera a tot l'ample */
+header {
+    width: 100vw; /* Amplada total */
+    background-color: #333;
+    color: #fff;
+    padding: 0; /* Espai a dalt i a baix */
+    text-align: center;
+}
+
+header img {
+    max-width: 100%; /* Imatge ajustada a l'ample del contenidor */
+    height: auto;
+}
+
+/* Superposició de fons */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fons negre amb transparència */
+    z-index: 0; /* Darrere del text */
+}
+/* Estil personalitzat per al text alineat a l'esquerra */
+.text-left-custom {
+    text-align: left; /* Alinear text a l'esquerra */
+}
+/* Contenidor principal */
+main {
+    max-width: 1200px; /* Amplada màxima del contenidor principal */
+    width: 100%; /* Ajustar a amplada completa */
+    padding: 0; /* Espai interior eliminat */
+}
+.carousel-item img {
+    width: 70%; /* Ajusta el ancho al 70% o cualquier valor que desees */
+    margin: 0 auto; /* Centra la imagen */
+    height: auto; /*
+     Mantiene la proporción de la imagen */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para las flechas */
+    border-radius: 50%; /* Redondear las esquinas */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(1); /* Invertir colores si es necesario */
+    z-index: 10; /* Asegúrate de que las flechas estén por encima de otros elementos */
+}
+
+
+
+.music-videos-container {
+    background-color: transparent; /* Fondo transparente para integrarse con el resto */
+    padding: 1px 0; /* Espaciado vertical */
+    margin: 2px 0; /* Margen para separarlo de otros elementos */
+}
+.album-img {
+    transition: transform 0.3s ease; /* Suaviza la transición */
+    border-radius: 5px;
+}
+
+.album-img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+
+/* Estils de secció */
+section {
+    background-color: #444; /* Fons fosc per a seccions */
+    padding: 20px;
+    margin: 20px 0; /* Espai entre seccions */
+    border-radius: 8px; /* cantonades arrodonides */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estils de peu de pàgina */
+footer {
+    background-color: #333; /* Fons fosc */
+    color: #fff; /* Color del text blanc */
+    padding: 20px; /* Espaciament interior */
+    text-align: center; /* Centrar el text al peu de pàgina */
+    width: 100%; /* Assegura que el peu de pàgina ocupi tot l'ample */
+}
+
+.footer-content {
+    max-width: 1200px; /* Amplada màxima per al contingut del peu de pàgina */
+    margin: 0 auto; /* Centrar el contingut */
+    display: flex; /* Utilitzar flexbox per a la distribució */
+    justify-content: space-between; /* Espai entre columnes */
+    align-items: center; /* Alinear verticalment el contingut */
+}
+
+.footer-column {
+    flex: 1; /* Cada columna ocuparà el mateix espai */
+    min-width: 200px; /* Amplada mínima per a les columnes */
+    margin: 10px; /* Espai entre columnes */
+    text-align: left; /* Alinear el text a l'esquerra en contacte */
+}
+
+.contact-info {
+    text-align: left; /* Alinear el text a l'esquerra per al contacte */
+}
+
+.copyright {
+    text-align: center; /* Centrar el text de copyright */
+    flex: 2; /* Més espai per al copyright */
+}
+
+.social-links {
+    text-align: right; /* Alinear el text a la dreta en xarxes socials */
+}
+
+h4 {
+    margin-bottom: 10px; /* Espai sota dels encapçalaments */
+}
+
+a {
+    color: #fff; /* Color d'enllaços */
+    text-decoration: none; /* Sense subratllat */
+}
+
+a:hover {
+    text-decoration: underline; /* Subratllar al passar el ratolí */
+}
+
+/* Estils responsive */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column; /* Apilar columnes en pantalles petites */
+        align-items: center; /* Centrar el contingut */
+    }
+    .footer-column {
+        text-align: center; /* Centrar text en pantalles petites */
+    }
+}
+
+/* Secció 'Sobre' */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-text {
+    background: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.collage-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr; /* Dues columnes */
+}
+
+.collage-item {
+    position: relative;
+}
+
+.collage-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.collage-item.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    font-style: italic;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Disseny responsive */
+@media (max-width: 600px) {
+    .collage-grid {
+        grid-template-columns: 1fr; /* Una columna en mòbils */
+    }
+}
+
+/* Secció 'Sobre' */
+.about-section {
+    position: relative;
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Fons clar */
+    overflow: hidden; /* Prevenir overflow */
+}
+
+/* Estils del títol de la secció */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem; /* Mida de títol gran */
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333; /* Color per als títols de secció */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/* Collage Adaptatiu */
+.collage-grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-areas:
+        "img1 text1"
+        "img2 img3"
+        "text2 img4";
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 450px !important; /* Augmenta l'ample màxim */
+    grid-auto-rows: 140px !important; /* Augmenta l'alçada de les files */
+    margin-left: 1rem !important;
+}
+
+.collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: #f0f0f034;
+    color: #333;
+}
+
+.collage-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.img1 { grid-area: img1; }
+.img2 { grid-area: img2; }
+.img3 { grid-area: img3; }
+.img4 { grid-area: img4; }
+.text1 { grid-area: text1; }
+.text2 { grid-area: text2; }
+
+blockquote {
+    margin: 20px 0; /* Espaciament al voltant del bloc de cita */
+}
+
+blockquote footer {
+    margin-top: 40px; /* Augmentar el marge superior del footer */
+    font-style: italic; /* Estil del text al footer */
+    color: #ffffff; /* Canviar color del text si és necessari */
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .collage-grid {
+        grid-template-areas:
+            "img1"
+            "text1"
+            "img2"
+            "img3"
+            "text2"
+            "img4";
+        grid-template-columns: 1fr;
+        max-width: 100%; /* Ocupa l'ample complet en pantalles petites */
+    }
+}
+
+/* Imatge a tot l'ample */
+.full-width-image {
+    position: relative;
+    text-align: center;
+}
+
+.full-width-image img {
+    width: 100%; /* Imatge ocupa tot l'ample */
+    height: auto;
+}
+
+/* Títol centrat */
+.centered-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 8rem; /* Augmentar la mida de la font */
+    font-family: 'Impact', sans-serif; /* Font Impact */
+    text-transform: uppercase; /* Text en majúscules */
+    text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.8); /* Ombra més pronunciada */
+    letter-spacing: 10px; /* Espaiat entre lletres augmentat */
+    font-weight: bold;
+    z-index: 1; /* Assegura que estigui per sobre de la imatge */
+}
+
+.bubble-container {
+    position: absolute; /* Assegura que estigui posicionat absolutament dins de la navbar */
+    width: 100%;
+    top: 0; /* Alinear amb la part superior de la navbar */
+    left: 0;
+    overflow: hidden; /* Prevenir overflow */
+    pointer-events: none; /* Prevenir que els clics siguin capturats per les bombolles */
+    z-index: 1; /* Assegura que sigui sota els elements de la navbar */
+}
+
+.shop-img {
+    transition: transform 1s ease; /* Suavitza la transició */
+}
+
+.shop-img:hover {
+    transform: scale(1.1); /* Augmenta la mida de la imatge al 110% */
+    z-index: 5; /* Assegura que la imatge creixent estigui per sobre d'altres elements */
+}
+
+/* Media Queries per a Responsivitat */
+@media (max-width: 480px) { /* Estils per a mòbils */
+    body, html { /* Assegura't que no hi hagi marge o padding */
+        margin: 0; 
+        padding: 0; 
+        overflow-x: hidden; /* Prevenir scroll horitzontal */
+    }
+
+    header {
+        padding: 0; /* Reduir padding */
+    }
+    
+    .section-title {
+        font-size: 1.8rem; /* Títol més petit per a mòbils */
+    }
+
+    main {
+        padding: 0; /* Eliminat padding per evitar espai en blanc */
+    }
+    
+    .about-content {
+        flex-direction: column; /* Apilar elements verticalment */
+    }
+    
+    .about-text {
+        max-width: 100%; /* Permetre ample complet en mòbils */
+        padding: 15px; /* Reduir padding */
+    }
+
+    .centered-title {
+        font-size: 4rem; /* Ajustar la mida del títol per a mòbils */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px) { /* Estils per a tablets */
+    body, html { /* Assegura't que no hi hagi marge o padding */
+        margin: 0; 
+        padding: 0; 
+        overflow-x: hidden; /* Prevenir scroll horitzontal */
+    }
+
+    header {
+        padding: 10px; /* Espai superior i inferior */
+    }
+
+    .section-title {
+        font-size: 2rem; /* Ajustar mida de títol per a tablets */
+    }
+    
+    .about-text {
+        max-width: 100%; /* Permetre ample complet en tablets */
+        padding: 20px; /* Ajustar padding */
+    }
+
+    .centered-title {
+        font-size: 5rem; /* Ajustar mida de text per a tablets */
+    }
+}
+
+@media (min-width: 801px) { /* Estils per a PC */
+    .section-title {
+        font-size: 2.5rem; /* Títol més gran per a PC */
+    }
+    
+    .about-content {
+        flex-direction: row; /* Lateral per a pantalles més grans */
+    }
+}
